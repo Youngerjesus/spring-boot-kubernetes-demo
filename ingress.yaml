@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - pathType: Prefix
+            path: /service1
+            backend:
+              serviceName: app-demo-1
+              servicePort: 30001
+          - pathType: Prefix
+            path: /service2
+            backend:
+              serviceName: app-demo-2
+              servicePort: 30002
+

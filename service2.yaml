@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-demo-2
+spec:
+  selector:
+    matchLabels:
+      app: app-demo-2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app-demo-2
+    spec:
+      containers:
+        - name: app-demo-2
+          image: jeongminyeo/spring-boot-kubernetes-demo-service2
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name:  app-demo-2
+spec:
+  selector:
+    app:  app-demo-2
+  type:  NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30002
