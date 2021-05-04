@@ -12,8 +12,15 @@ spec:
       labels:
         app: app-demo-1
     spec:
+      volumes:
+        - name: k8s-configmap-volume
+          configMap:
+            name: k8s-configmap   
       containers:
         - name: app-demo-1
           image: jeongminyeo/spring-boot-kubernetes-demo-service1
+          volumeMounts:
+            - mountPath: /etc/config
+              name: k8s-configmap-volume
           ports:
             - containerPort: 8080
