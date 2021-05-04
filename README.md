@@ -28,8 +28,9 @@ $ kubectl apply -f service2.yaml
 
 #### 4. Deploy ingress.yaml 
 
-
-
+```
+$ kubectl apply -f ingress.yaml
+```
 
 
 
