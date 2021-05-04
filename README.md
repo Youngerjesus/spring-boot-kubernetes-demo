@@ -14,9 +14,6 @@ $ git clone https://github.com/Youngerjesus/spring-boot-kubernetes-demo.git
 ```
 $ kubectl apply -f deployment1.yaml
 ```
-
-<br/> 
-
 ```
 $ kubectl apply -f service1.yaml
 ```
@@ -26,7 +23,6 @@ $ kubectl apply -f service1.yaml
 ```
 $ kubectl apply -f deployment2.yaml
 ```
-<br/> 
 ```
 $ kubectl apply -f service2.yaml
 ```
