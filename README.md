@@ -1,4 +1,4 @@
-## spring-boot-kubernetes-demo
+## spring-boot-kubernetes-service-discovery
 
 ### Clone Repository  
 
